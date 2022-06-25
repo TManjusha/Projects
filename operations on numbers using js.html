@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo on Operations</title>
+	<style type="text/css">
+		ol{
+			text-align: left;
+			display: table;
+  			margin: 0 auto;
+		}
+	</style>
+	<script type="text/javascript">
+		function Factorial(){
+			var i, num, f;
+		 	num = document.getElementById("number").value;  
+			f = 1;    
+			for(i = 1; i <= num; i++)    
+			{  
+				f = f * i;  
+			}      
+			document.getElementById("res").innerHTML = "The Factorial of " + num + " is " + f ;  
+		}
+		function fib(){
+			var num = document.getElementById("number").value;
+			var n1,n2,n3;
+			n1 = 0, n2 = 1;
+			res = n1+" "+n2
+			for(var i=1; i<num; i++){
+				n3 = n1+n2
+				n1 = n2
+				n2 = n3
+				res = res+" "+n3
+			}
+			document.getElementById("res").innerHTML = "The Fibonacci series upto " + num + " is <br>" + res ; 
+		}
+		function pal(){
+			var num = document.getElementById("number").value;
+			var res = 0
+			var rem,temp;
+			temp = num;
+			while(temp > 0){
+				rem = temp % 10
+				res = res*10 + rem
+				temp = parseInt(temp / 10)
+			}
+			if(num == res){
+				document.getElementById("res").innerHTML = num + " is a Palindrome"
+			}
+			else{
+				document.getElementById("res").innerHTML = num + " is not a Palindrome"
+			}
+		}
+		function isPrime(val) {
+			res = true
+			for (var i = 2; i < val; i++) {
+        		if (val % i == 0) {
+            		res = false;
+            		break;
+        		}
+    		}
+    		return res
+		}
+
+		function prim_num(){
+			num = document.getElementById("number").value;
+			if(num == 1){
+				document.getElementById("res").innerHTML = num +" is neither prime nor composite"
+			}
+			if(num>1){
+				ans = ""
+				for(var i=2; i<num; i++){
+					if(isPrime(i)){
+						ans = ans + i + " "
+					}
+				}
+				document.getElementById("res").innerHTML = "The Prime Numbers upto "+ num +" are <br>" +ans
+			}
+		}
+
+
+	</script>
+</head>
+<body>
+	<center>
+		<h3 style="background-color: greenyellow;">Demo on Operations using Java Script</h3>
+		<input type="textbox" name="box1" placeholder="enter a number" id="number"><br><br>
+		<ol type="a">
+			<li><input type="button" name="b1" value="Factorial" 
+				onclick="Factorial()"></li><br>
+			<li><input type="button" name="b2" value="Fibonacci series" onclick="fib()"></li><br>
+			<li><input type="button" name="b3" value="Prime Number" onclick="prim_num()"></li><br>
+			<li><input type="button" name="b4" value="Palindrome" onclick="pal()"></li><br>
+		</ol>
+		<h4 id="res"></h4>
+	</center>
+</body>
+</html>

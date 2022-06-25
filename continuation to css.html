@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo on different CSS attributes</title>
+	<style type="text/css">
+	/*link, visited, hover, active are used to change the property
+	a.class_name:property for the class name */
+	/* apply style properties on table and forms */
+		#link2{
+			color: green;
+			text-decoration: none;
+		}
+		#link2:link{
+			color : green;
+			text-decoration: none;
+		}
+		#link2:hover{
+			color: red;
+		}
+		#link3{
+			border-style: solid;
+			border-color: green;
+			padding : 5px;
+			margin-top: 5px;
+			text-decoration: none;
+		}
+		#link3:hover{
+			background-color: pink;
+			text-decoration: underline;
+		}
+		#link4{
+			border-style: solid;
+			border-color: red;
+			background-color: red;
+			padding: 5px;
+			text-decoration: none;
+		}
+		#link4:hover{
+			background-color: green;
+			text-decoration: underline;
+		}
+		ol{
+			background-color: hotpink;
+			color: green;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			padding-right: 3px;
+		}
+		ul{
+			background-color: #056383;
+			color: white;
+		}
+		ol li{
+			background-color: lightpink;
+			margin: 10px;
+			padding: 5px;
+		}
+		ul li{
+			background-color: lightsalmon;
+		}
+		p:first-child{
+			color: red;
+		}
+		a:first-child{
+			background-color: lightpink;
+		}
+		p::first-line{
+			color: green;
+		}
+		::selection{
+			color: blue;
+			background-color: lightpink;
+		}
+	</style>
+</head>
+<body>
+	we wrote #below so that nothing will happen if we click that link<br><br>
+	<a href="#" id = 'link1'>Link 1</a> &nbsp;&nbsp;
+	<a href="#" id = 'link2'>Link 2</a> &nbsp;&nbsp;
+	<a href="#" id = 'link3'>Link 3</a> &nbsp;&nbsp;
+	<a href="#" id = 'link4'>Link 4</a> &nbsp;&nbsp;
+	<br><br>
+	<h1 align="center">CSS Lists</h1>
+	<ol>
+		<li>Operating Systems</li>
+		<li>English-II</li>
+		<li>Discrete Mathematics</li>
+		<li>Data Science using Python</li>
+		<li>Database Management Systems</li>
+	</ol>
+	<ul>
+		<li>Database Management System Lab</li>
+		<li>Data Science using Python Lab</li>
+		<li>Software Engineering using UML Lab</li>
+		<li>Web Application Development</li>
+	</ul>
+	<br><br>
+	<h1 align="center">Pseudo Classes Demo</h1>
+	<div>
+		<a href="#">Click here</a><br>
+		<a href="#">Click here 2</a>
+		<p>Testing p1 <br> test1</p>
+		<p>Testing p2 <br> test2</p>
+	</div>
+</body>
+</html>
